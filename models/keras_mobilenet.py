@@ -59,9 +59,9 @@ import warnings
 # from .imagenet_utils import decode_predictions
 # from .imagenet_utils import _obtain_input_shape
 # from tensorflow.python.keras.applications import keras_modules_injection
-import tensorflow.python as tf
-from tensorflow.python.keras import layers, backend, models
-from tensorflow.python.keras import utils as keras_utils
+import tensorflow as tf
+from tensorflow.keras import layers, backend, models
+from tensorflow.keras import utils as keras_utils
 
 BASE_WEIGHT_PATH = ('https://github.com/fchollet/deep-learning-models/'
                     'releases/download/v0.6/')

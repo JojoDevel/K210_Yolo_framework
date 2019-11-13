@@ -1,9 +1,9 @@
-import tensorflow.python as tf
+import tensorflow as tf
 from tensorflow.contrib import slim
 from models.mobilenet_v2 import training_scope, mobilenet_base
-from tensorflow.python import keras
-import tensorflow.python.keras.backend as K
-from tensorflow.python.keras.layers import *
+from tensorflow import keras
+import tensorflow.keras.backend as K
+from tensorflow.keras.layers import *
 from models.keras_mobilenet_v2 import MobileNetV2
 from models.keras_mobilenet import MobileNet
 from functools import reduce, wraps

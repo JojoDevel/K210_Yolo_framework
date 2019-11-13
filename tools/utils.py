@@ -1,5 +1,5 @@
-import tensorflow.python as tf
-import tensorflow.python.keras.backend as K
+import tensorflow as tf
+import tensorflow.keras.backend as K
 from tensorflow import map_fn
 import numpy as np
 import os
@@ -435,7 +435,7 @@ class Helper(object):
                     # NOTE use copy avoid change the annotaion value !
                     yield img_path, np.copy(true_box)
 
-        dataset = (tf.data.Dataset.from_generator(gen, (tf.framework_ops.dtypes.string, tf.float32), ([], [None, 5])).
+        dataset = (tf.data.Dataset.from_generator(gen, (tf.dtypes.string, tf.float32), ([], [None, 5])).
                    shuffle(batch_size * 500 if is_training == True else batch_size * 50, rand_seed).repeat().
                    map(_parser_wrapper, tf.data.experimental.AUTOTUNE).
                    batch(batch_size, True).prefetch(tf.data.experimental.AUTOTUNE))
